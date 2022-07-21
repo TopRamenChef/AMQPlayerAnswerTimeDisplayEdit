@@ -28,11 +28,11 @@ new Listener("Game Starting", ({players}) => {
     }
 }).bindListener()
 
-new Listener("player answered", (data) => {
+/*new Listener("player answered", (data) => {
     data.filter(gamePlayerId => !ignoredPlayerIds.includes(gamePlayerId)).forEach(gamePlayerId => {
         quiz.players[gamePlayerId].answer = amqAnswerTimesUtility.playerTimes[gamePlayerId]/1000 + "s"
     })
-}).bindListener()
+}).bindListener()*/
 
 quiz._playerAnswerListner = new Listener(
     "player answers",
